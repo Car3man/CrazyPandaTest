@@ -32,6 +32,7 @@ namespace RedPanda.Project.Services.UI
             if (_views.TryGetValue(view, out var uiControl))
             {
                 uiControl.Destroy();
+                _views.Remove(view);
             }
         }
     }
